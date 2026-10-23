@@ -100,7 +100,7 @@ The Grafana dashboard is designed to display:
 - Node Exporter target availability.
 - Historical metric trends for troubleshooting.
 
-Add your actual screenshots below as you upload them to the repository.
+
 
 ### CPU Monitoring
 
