@@ -104,19 +104,20 @@ Add your actual screenshots below as you upload them to the repository.
 
 ### CPU Monitoring
 
-<!-- Add your CPU dashboard screenshot here after uploading it to screenshots/grafana-cpu.png -->
+![Grafana CPU Monitoring Dashboard](screenshots/grafana-cpu.png)
+
 
 ### Memory Monitoring
 
-<!-- Add your memory dashboard screenshot here after uploading it to screenshots/grafana-memory.png -->
+![Grafana Memory Monitoring Dashboard](screenshots/grafana-memory.png)
 
 ### Disk Monitoring
 
-<!-- Add your disk dashboard screenshot here after uploading it to screenshots/grafana-disk.png -->
+![Grafana Disk Monitoring Dashboard](screenshots/grafana-disk.png)
 
 ### Slack Alerts
 
-<!-- Add your Slack alert screenshot here after uploading it to screenshots/slack-alerts.png -->
+![Slack Monitoring Alert Notifications](screenshots/slack-alerts.png)
 
 ## Security Considerations
 
