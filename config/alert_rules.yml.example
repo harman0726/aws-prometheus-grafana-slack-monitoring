@@ -1,1 +1,47 @@
 
+groups:
+  - name: infrastructure_alerts
+    rules:
+      - alert: HighCPUUsage
+        expr: |
+          100 * (1 - avg by (instance) (
+            rate(node_cpu_seconds_total{mode="idle"}[5m])
+          )) > 80
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage on {{ $labels.instance }}"
+          description: "CPU usage has exceeded 80% for 2 minutes."
+
+      - alert: HighMemoryUsage
+        expr: |
+          100 * (
+            1 - node_memory_MemAvailable_bytes
+            / node_memory_MemTotal_bytes
+          ) > 80
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage on {{ $labels.instance }}"
+          description: "Memory usage has exceeded 80% for 2 minutes."
+
+      - alert: InstanceDown
+        expr: up{job="node_exporter"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Node Exporter target unavailable"
+          description: "Prometheus cannot scrape {{ $labels.instance }}."
+
+      - alert: SSLCertificateExpiringSoon
+        expr: probe_ssl_earliest_cert_expiry - time() < 30 * 24 * 60 * 60
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "SSL certificate expiring soon"
+          description: "The monitored SSL certificate expires in fewer than 30 days."
+
