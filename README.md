@@ -130,6 +130,15 @@ The Grafana dashboard is designed to display:
 - Use HTTPS and appropriately restricted security group rules wherever applicable.
 - Review AWS resource costs and stop or scale down resources when they are not required for testing.
 
+  ## Configuration Examples
+
+The following sanitized examples demonstrate how Prometheus collects metrics and evaluates alert rules.
+
+- [Prometheus configuration example](config/prometheus.yml.example)
+- [Prometheus alert rules example](config/alert_rules.yml.example)
+
+These are documentation examples, not necessarily exact copies of the live configuration running on the EC2 instance. Review and adapt them before using them in another environment.
+
 ## Repository Structure
 
 ```text
