@@ -6,7 +6,10 @@ This project implements an AWS infrastructure monitoring and alerting solution u
 
 The goal is to monitor EC2 application instances, visualize infrastructure metrics, check website HTTPS availability and SSL certificate expiration, and deliver automated alerts to Slack when configured conditions are met.
 
+
 ## Architecture
+
+![AWS Monitoring Architecture](architecture/monitoring-architecture.png)
 
 ```mermaid
 flowchart TD
