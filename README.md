@@ -156,7 +156,7 @@ aws-prometheus-grafana-slack-monitoring/
     └── alert_rules.yml.example
 ```
 
-The folders and image files above are the planned documentation structure. Add each file before referencing it as an existing repository asset. Configuration examples must not contain credentials or webhook secrets.
+The repository contains the project documentation, architecture diagram, monitoring screenshots, and sanitized configuration examples. Configuration examples do not contain credentials or webhook secrets.
 
 ## Skills Demonstrated
 
